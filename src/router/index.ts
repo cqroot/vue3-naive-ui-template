@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { Home, Person } from "@vicons/ionicons5";
+import { Home, Notifications, Person } from "@vicons/ionicons5";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,13 +12,28 @@ const router = createRouter({
       path: "/home",
       name: "home",
       component: () => import("@/views/HomeView.vue"),
-      meta: { icon: Home },
+      meta: {
+        title: "Home",
+        icon: Home,
+      },
+    },
+    {
+      path: "/notification",
+      name: "notification",
+      component: () => import("@/views/notification/NotificationView.vue"),
+      meta: {
+        title: "Notification",
+        icon: Notifications,
+      },
     },
     {
       path: "/about",
       name: "about",
       component: () => import("@/views/AboutView.vue"),
-      meta: { icon: Person },
+      meta: {
+        title: "About",
+        icon: Person,
+      },
     },
   ],
 });

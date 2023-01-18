@@ -28,7 +28,7 @@ for (const r of routes) {
             name: r.path.substring(1),
           },
         },
-        { default: () => r.name }
+        { default: () => r.meta.title }
       ),
     key: r.path,
     icon: renderIcon(r.meta.icon as Component),

@@ -8,7 +8,7 @@ import RouterMenu from "@/layouts/RouterMenu.vue";
     <n-message-provider>
       <n-layout>
         <n-layout-header style="height: 64px; padding: 24px" bordered>
-          Yiheyuan Road
+          Vue3 + NaiveUI Template
         </n-layout-header>
 
         <n-layout has-sider style="height: calc(100vh - 64px)">
@@ -22,7 +22,6 @@ import RouterMenu from "@/layouts/RouterMenu.vue";
             <router-menu />
           </n-layout-sider>
           <n-layout-content content-style="padding: 24px;">
-            Pingshan Road
             <router-view />
           </n-layout-content>
         </n-layout>
