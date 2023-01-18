@@ -33,6 +33,12 @@ for (const r of routes) {
     key: r.path,
     icon: renderIcon(r.meta.icon as Component),
   });
+
+  if (r.meta.withDivider === true) {
+    menuOptions.push({
+      type: "divider",
+    });
+  }
 }
 
 const currentPath = computed(() => route.path);

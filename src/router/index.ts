@@ -24,6 +24,7 @@ const router = createRouter({
       meta: {
         title: "Notification",
         icon: Notifications,
+        withDivider: true,
       },
     },
     {
