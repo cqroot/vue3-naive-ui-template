@@ -45,12 +45,16 @@ const { currentTheme, toggleTheme } = useTheme();
               collapse-mode="width"
               :collapsed-width="0"
               :width="240"
+              :native-scrollbar="false"
               show-trigger="bar"
               bordered
             >
               <router-menu />
             </n-layout-sider>
-            <n-layout-content content-style="padding: 24px;">
+            <n-layout-content
+              :native-scrollbar="false"
+              content-style="padding: 24px;"
+            >
               <router-view />
             </n-layout-content>
           </n-layout>
