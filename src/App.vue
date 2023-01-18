@@ -3,14 +3,15 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <n-layout position="absolute">
+  <n-layout>
     <n-layout-header style="height: 64px; padding: 24px" bordered>
       Yiheyuan Road
     </n-layout-header>
-    <n-layout has-sider>
+
+    <n-layout has-sider style="height: calc(100vh - 64px)">
       <n-layout-sider
         collapse-mode="width"
-        :collapsed-width="120"
+        :collapsed-width="0"
         :width="240"
         show-trigger="bar"
         content-style="padding: 24px;"
