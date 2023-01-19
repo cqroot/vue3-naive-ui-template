@@ -38,11 +38,11 @@ const notify = (type: NotificationType) => {
 <template>
   <h2>Message</h2>
   <n-space style="margin-bottom: 20px">
-    <n-button @click="info"> Info(Hover will keep alive) </n-button>
-    <n-button @click="error"> Error </n-button>
-    <n-button @click="warning"> Warning </n-button>
-    <n-button @click="success"> Success </n-button>
-    <n-button @click="loading"> Loading </n-button>
+    <n-button type="info" @click="info"> Info(Hover will keep alive) </n-button>
+    <n-button type="error" @click="error"> Error </n-button>
+    <n-button type="warning" @click="warning"> Warning </n-button>
+    <n-button type="success" @click="success"> Success </n-button>
+    <n-button type="primary" @click="loading"> Loading </n-button>
   </n-space>
 
   <h2>Notification</h2>
