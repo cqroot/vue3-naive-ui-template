@@ -12,5 +12,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
-  ignorePatterns: ["auto-imports.d.ts", "components.d.ts"],
+  ignorePatterns: [
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "postcss.config.js",
+    "tailwind.config.js",
+  ],
 };
