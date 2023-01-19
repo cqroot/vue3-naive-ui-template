@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: "/home",
       name: "home",
-      component: () => import("@/views/HomeView.vue"),
+      component: () => import("@/views/home/HomeView.vue"),
       meta: {
         title: "Home",
         icon: Home,
@@ -30,7 +30,7 @@ const router = createRouter({
     {
       path: "/about",
       name: "about",
-      component: () => import("@/views/AboutView.vue"),
+      component: () => import("@/views/about/AboutView.vue"),
       meta: {
         title: "About",
         icon: Person,
