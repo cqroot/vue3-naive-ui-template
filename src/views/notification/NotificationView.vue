@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { useMessage } from "naive-ui";
-import { useNotification } from "naive-ui";
 import type { NotificationType } from "naive-ui";
-const message = useMessage();
 const info = () => {
-  message.info("I don't know why nobody told you how to unfold your love", {
-    keepAliveOnHover: true,
-  });
+  window.$message.info(
+    "I don't know why nobody told you how to unfold your love",
+    {
+      keepAliveOnHover: true,
+    }
+  );
 };
 const error = () => {
-  message.error("Once upon a time you dressed so fine");
+  window.$message.error("Once upon a time you dressed so fine");
 };
 const warning = () => {
-  message.warning("How many roads must a man walk down");
+  window.$message.warning("How many roads must a man walk down");
 };
 const success = () => {
-  message.success(
+  window.$message.success(
     "'Cause you walked hand in hand With another man in my place"
   );
 };
 const loading = () => {
-  message.loading(
+  window.$message.loading(
     "If I were you, I will realize that I love you more than any other guy"
   );
 };
-const notification = useNotification();
+
 const notify = (type: NotificationType) => {
-  notification[type]({
+  window.$notification[type]({
     content: "What to say?",
     meta: "I don't know",
     duration: 2500,

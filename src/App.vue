@@ -4,7 +4,11 @@ import MainLayout from "@/layouts/MainLayout.vue";
 </script>
 
 <template>
-  <main-layout>
-    <router-view />
-  </main-layout>
+  <n-notification-provider>
+    <n-message-provider>
+      <main-layout>
+        <router-view />
+      </main-layout>
+    </n-message-provider>
+  </n-notification-provider>
 </template>
