@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: "/home",
       name: "home",
-      component: () => import("@/views/home/HomeView.vue"),
+      component: () => import("@/views/HomeView.vue"),
       meta: {
         title: "Home",
         icon: Home,
@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: "/notification",
       name: "notification",
-      component: () => import("@/views/notification/NotificationView.vue"),
+      component: () => import("@/views/NotificationView.vue"),
       meta: {
         title: "Notification",
         icon: Notifications,
@@ -29,7 +29,7 @@ const router = createRouter({
     {
       path: "/request",
       name: "request",
-      component: () => import("@/views/request/RequestView.vue"),
+      component: () => import("@/views/RequestView.vue"),
       meta: {
         title: "Request",
         icon: Browsers,
@@ -39,7 +39,7 @@ const router = createRouter({
     {
       path: "/about",
       name: "about",
-      component: () => import("@/views/about/AboutView.vue"),
+      component: () => import("@/views/AboutView.vue"),
       meta: {
         title: "About",
         icon: Person,
