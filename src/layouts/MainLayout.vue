@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
 import RouterMenu from "@/layouts/RouterMenu.vue";
 import {
   LogoGithub as GithubIcon,
@@ -17,20 +18,34 @@ const { currentTheme, toggleTheme } = useTheme();
 <template>
   <n-config-provider :theme="currentTheme">
     <n-layout>
-      <n-layout-header style="height: 64px; padding: 24px" bordered>
-        Vue3 + NaiveUI Template
+      <n-layout-header style="height: 64px; padding: 15px" bordered>
+        <router-link custom to="/" v-slot="{ navigate }">
+          <n-button
+            quaternary
+            @click="navigate"
+            :focusable="false"
+            style="font-weight: bold; font-size: 18px"
+            >Vue3 NaiveUI Template</n-button
+          >
+        </router-link>
         <n-space style="float: right">
           <a
             href="https://github.com/cqroot/vue3-naiveui-template"
             target="_blank"
           >
-            <n-button quaternary circle type="primary">
+            <n-button quaternary circle type="primary" :focusable="false">
               <template #icon>
                 <n-icon><github-icon /></n-icon>
               </template>
             </n-button>
           </a>
-          <n-button quaternary circle type="primary" @click="toggleTheme">
+          <n-button
+            quaternary
+            circle
+            type="primary"
+            :focusable="false"
+            @click="toggleTheme"
+          >
             <template #icon>
               <n-icon>
                 <sunny-icon v-if="currentTheme.name === 'light'" />
